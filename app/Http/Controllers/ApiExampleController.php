@@ -24,6 +24,6 @@ use Illuminate\Http\Request;
 class ApiExampleController extends Controller
 {
     public function getRandomQuote() {
-        return response()->json(['data' => Inspiring::quote()], 200);
+        return response()->json(['data' => str(Inspiring::quote())->stripTags()->toString()], 200);
     }
 }
