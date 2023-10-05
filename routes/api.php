@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/quote', [ApiExampleController::class, 'getRandomQuote'])->name("api.example.quote.random");
+Route::get('/quotes', [ApiExampleController::class, 'getAllQuotes'])->name("api.example.quote.index");
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

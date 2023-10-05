@@ -17,4 +17,9 @@ class ApiExampleControllerTest extends TestCase
         $this->assertArrayHasKey("data", $data);
         $this->assertNotNull("data", $data['data']);
     }
+
+    public function test_all_quotes(): void
+    {
+        $this->get(route('api.example.quote.index'))->assertOk();
+    }
 }
